@@ -1,0 +1,9 @@
+
+<div class="center hero-unit">
+  <h1>Pivot IT</h1>
+  <h2>
+	Welcome to Pivot IT.
+  </h2>
+  <%= link_to image_tag("logo.gif", alt: "Pivot"), '#' %> <br/>
+  <%= link_to "Sign in or Sign up", signup_path, class: "btn btn-large btn-primary" %>
+</div>

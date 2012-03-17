@@ -1,0 +1,28 @@
+<% provide(:title, 'All users') %>
+<h1> All users </h1>
+
+<%= will_paginate %>
+<table>
+   <tr>
+       <th> Num </th>
+       <th > Name </th>
+       <th> Role </th>
+       <th> Company </th>
+       <% if current_user.admin?  %>
+          <th> Action </th>
+       <% end %>  
+   </tr>
+   <% @users.each do |f| %>
+     <tr>
+       <td class="td_id"> <%= f.id %> </td>
+       <td class="td_name"> <%= f.name %> </td>
+       <td class="td_role"> <%= f.role %> </td>
+       <td class="td_comp"> <%= f.company %> </td>
+       <% if current_user.admin? && !current_user?(f) %>
+          <td> <%= link_to "delete", f, method: :delete, confirm: "Are you sure?" %> </td>
+       <% end %> 
+     </tr>
+   <% end %>
+</table>
+<%= will_paginate %>
+

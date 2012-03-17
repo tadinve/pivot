@@ -1,0 +1,3 @@
+<li>
+   <span class="content"><%= pivot.content %></span>
+</li>

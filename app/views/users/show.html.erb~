@@ -1,0 +1,42 @@
+<% provide(:title, @user.name) %>
+<div class="row">
+   <aside class="span4">
+       <section>
+	  <h1>
+	    <%= @user.name %> 
+	  </h1>
+          <h2>
+		 ( <%= @user.role %> at <%= @user.company %> ) 
+	  </h2>
+  
+   </aside>
+</div>
+<div>
+<table class="pivots">
+<tr>
+<th>
+   Create a Pivot
+</th>
+<th>
+       <% if @user.pivots.any? %>	
+	  Pivots (<%= @user.pivots.count %>)
+       <% end %>   
+</th>
+</tr>
+<tr>
+<td>
+   <%= render 'shared/pivot_form' %>
+</td>
+<td>
+   <div class="span8">
+       <% if @user.pivots.any? %>		     
+             <ol class="pivots">
+		<%= render @pivots %>
+	     </ol>	
+	     <%= will_paginate @pivots %>
+       <% end %>
+   </div>
+</td>
+</tr>
+</table>
+</div>

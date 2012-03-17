@@ -1,0 +1,5 @@
+<%= form_for(@pivot) do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+    <%= f.text_field :content, placeholder: "Compose new Pivot..." %>
+  <%= f.submit "Create Pivot", class: "btn btn-large btn-primary" %>
+<% end %>

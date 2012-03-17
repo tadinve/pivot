@@ -1,0 +1,14 @@
+     <footer class="footer">
+         <div class="container">
+               <small>
+			Redefining Lead Generation and Qualification 
+	       </small> 
+		<nav class="center">
+		    <ul class="center">
+			<li><%= link_to "About", about_path %> </li>
+			<li><%= link_to "Contact", contact_path %> </li>
+			<li><%= link_to "News", '#' %> </li>
+		    </ul>
+		</nav>
+	 </div>	     
+     </footer>  
